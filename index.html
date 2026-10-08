@@ -203,6 +203,7 @@ button { cursor: pointer; }
 
 .detail { margin-top: 12px; padding: 14px; border-radius: 12px; background: var(--surface); border: 1px solid var(--line); display: flex; flex-direction: column; gap: 12px; font-size: 0.9375rem; }
 .detail p { margin: 0; }
+.detail .checked { color: var(--muted); font-size: var(--step--1); }
 .detail dl { margin: 0; display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 4px 12px; }
 .detail dt { font: 600 var(--step-0)/1.45 var(--font-display); color: var(--muted); }
 .detail dd { margin: 0; min-width: 0; }
@@ -406,24 +407,75 @@ const addDays = (d, n) => { const x = new Date(d); x.setDate(x.getDate() + n); r
 const seg = (s, e, lim, note = "") => ({ s: toMin(s), e: toMin(e), lim: !!lim, note });
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 
+// ---- daily automatic check (times.json, written by scripts/fetch-times.mjs) ----
+// Each pool's own weekly timetable as it was on CHECKED. While the live one still matches,
+// the hand-checked times above (with their lane notes) are used; once it differs, live times win.
+const BASELINE = {
+  binnenzee: "1:0900-1200,1900-2100|2:0700-1100|3:1000-1200|4:0700-1200|5:0900-1200,1900-2000|6:|7:0900-1100",
+  zijl: "1:0700-0830,0900-1330|2:0700-0830,0900-1330,1400-1530|3:0700-0830,0900-1330,1915-2030|4:0700-0830,0900-1330|5:0700-0830,0900-1330,1400-1530|6:|7:1015-1200",
+  vliet: "1:0700-1100,1230-1530,1900-2030|2:0700-1200,1230-1600,1900-2030|3:0700-1200|4:0700-1200,1230-1530,1915-2045|5:0700-1100,1230-1600,1915-2030|6:|7:1030-1330",
+  wedde: "1:0700-0930,1030-1300,2100-2200|2:0700-1300,2000-2200|3:0700-1300,2100-2200|4:0700-1300,2000-2200|5:0700-1300|6:|7:0930-1100",
+  sterrenbad: "1:0730-0845,1235-1315,1930-2015|2:0730-0930,1200-1330,2015-2100|3:0730-0900,1200-1300,1930-2015|4:0730-0930,1200-1300|5:0730-0930,1200-1300|6:0730-0810|7:0900-1000",
+};
+const LIVE_MAX_AGE = 4 * 864e5;
+let LIVE = null;
+
+// Union of overlapping or back-to-back times, as "0700-0830,0900-1330".
+function unionKey(segs) {
+  return mergeBlocks(segs).map(b => `${fmt(b.s).replace(":", "")}-${fmt(b.e).replace(":", "")}`).join(",");
+}
+const liveDaySegs = (l, d, hol) => (l.days[d] || []).map(([s, e, , alt]) => hol && alt ? seg(alt[0], alt[1], 0) : seg(s, e, 0));
+const weeklyKey = l => [1, 2, 3, 4, 5, 6, 7].map(d => `${d}:${unionKey((l.days[d] || []).map(([s, e]) => seg(s, e, 0)))}`).join("|");
+
+function liveFor(p) {
+  const l = LIVE?.pools?.[p.id];
+  if (!l) return { state: "builtin" };
+  if (!l.ok) return { state: "failed" };
+  if (Date.now() - new Date(LIVE.generated) > LIVE_MAX_AGE) return { state: "stale" };
+  if (l.kind === "weekly") return { state: weeklyKey(l) === BASELINE[p.id] ? "confirmed" : "changed", l };
+  return { state: "confirmed", l };
+}
+
+function liveDatedSegs(rows) {
+  return rows.map(([s, e, title, where]) => {
+    const extra = [(title.match(/\(([^)]+)\)/) || [])[1], /wedstrijdbad/i.test(where) ? "" : where].filter(Boolean).join(", ");
+    return seg(s, e, /minimaal|beschikbaar|multifunctione/i.test(`${title} ${where}`), extra && `From the pool's site: ${extra}`);
+  });
+}
+
 function slotsFor(p, date) {
   const ds = iso(date), day = dow(date);
   let segs = p.slots.filter(x => x[0] === day).map(([, s, e, l, n]) => seg(s, e, l, n));
-  const flags = [];
+  let flags = [];
   const hol = HOLIDAYS.find(h => ds >= h.from && ds <= h.to);
-  const r = p.adjust ? p.adjust({ date, ds, day, segs, hol }) : undefined;
-  if (r) { if (r.segs) segs = r.segs; if (r.flag) flags.push(r.flag); }
-  else if (hol) flags.push(`${hol.name}: times may differ, check the site`);
+  const live = liveFor(p);
+  if (live.state === "changed") {
+    segs = liveDaySegs(live.l, day, hol);
+    flags.push("This pool changed its timetable. Times come from its site; lane notes may be out of date.");
+    if (hol) flags.push(`${hol.name}: times may differ, check the site`);
+  } else {
+    const r = p.adjust ? p.adjust({ date, ds, day, segs, hol }) : undefined;
+    if (r) { if (r.segs) segs = r.segs; if (r.flag) flags.push(r.flag); }
+    else if (hol) flags.push(`${hol.name}: times may differ, check the site`);
+    // A dated feed covers specific days, including holidays and one-off changes.
+    if (live.l?.kind === "dated" && ds >= live.l.from && ds <= live.l.to) {
+      const fromSite = liveDatedSegs(live.l.dates[ds] || []);
+      if (unionKey(fromSite) !== unionKey(segs)) {
+        segs = fromSite;
+        flags = ["Different times than usual on this day, taken from the pool's site."];
+      }
+    }
+  }
   if (PUBLIC_HOLIDAYS[ds]) flags.push(`${PUBLIC_HOLIDAYS[ds]}: check whether the pool is open`);
-  return { segs, flags, blocks: mergeBlocks(segs) };
+  return { segs, flags, blocks: mergeBlocks(segs), live: live.state };
 }
 
-// Join back-to-back segments into one session, e.g. 09:00–10:00 (limited) + 10:00–12:00.
+// Join overlapping or back-to-back segments into one session, e.g. 09:00–10:00 (limited) + 10:00–12:00.
 function mergeBlocks(segs) {
   const out = [];
   for (const s of [...segs].sort((a, b) => a.s - b.s)) {
     const last = out[out.length - 1];
-    if (last && last.e === s.s) { last.e = s.e; last.parts.push(s); last.lim ||= s.lim; }
+    if (last && s.s <= last.e) { last.e = Math.max(last.e, s.e); last.parts.push(s); last.lim ||= s.lim; }
     else out.push({ s: s.s, e: s.e, lim: s.lim, parts: [s] });
   }
   return out;
@@ -519,8 +571,11 @@ function poolStatus(blocks, isToday, nowMin) {
 
 function weekRows(p, date) {
   const today = dow(date);
+  const live = liveFor(p);
   return [1, 2, 3, 4, 5, 6, 7].map(d => {
-    const bl = mergeBlocks(p.slots.filter(x => x[0] === d).map(([, s, e, l, n]) => seg(s, e, l, n)));
+    const bl = mergeBlocks(live.state === "changed"
+      ? liveDaySegs(live.l, d, null)
+      : p.slots.filter(x => x[0] === d).map(([, s, e, l, n]) => seg(s, e, l, n)));
     const txt = bl.length ? bl.map(b => `${fmt(b.s)}–${fmt(b.e)}${b.lim ? " *" : ""}`).join(", ") : "None";
     return `<dt>${DAY_SHORT[d - 1]}</dt><dd class="${d === today ? "today" : ""}">${txt}</dd>`;
   }).join("");
@@ -530,7 +585,7 @@ function renderLanes(pools, isToday, nowMin, date) {
   const el = document.getElementById("lanes");
   const ticks = [8, 10, 12, 14, 16, 18, 20].map(h => `<span style="left:${pct(h * 60)}%">${h}</span>`).join("");
   const showNow = isToday && nowMin >= AXIS_START && nowMin <= AXIS_END;
-  const rows = pools.map(({ p, segs, blocks, flags }) => {
+  const rows = pools.map(({ p, segs, blocks, flags, live }) => {
     const st = poolStatus(blocks, isToday, nowMin);
     const segHtml = segs.map(s => {
       const past = isToday && s.e <= nowMin;
@@ -554,6 +609,7 @@ function renderLanes(pools, isToday, nowMin, date) {
         ${notes ? `<ul class="notes">${notes}</ul>` : ""}
         <p>${esc(p.about)}</p>
         <p>${esc(p.price)}. No booking needed.</p>
+        <p class="checked">${checkedText(live)}</p>
         <dl aria-label="Regular week">${weekRows(p, date)}</dl>
         <div class="actions">
           <a class="btn primary" href="${p.url}" target="_blank" rel="noopener">Open pool timetable</a>
@@ -566,13 +622,30 @@ function renderLanes(pools, isToday, nowMin, date) {
     <div class="legend" aria-hidden="true"><span><i></i>Lap swimming</span><span><i class="lim"></i>Limited lanes or shared</span>${showNow ? '<span><i class="now"></i>Now</span>' : ""}</div>`;
 }
 
+function liveWhen() {
+  const g = new Date(LIVE.generated);
+  const day = iso(g) === iso(new Date()) ? "today" : iso(g) === iso(addDays(new Date(), -1)) ? "yesterday" : `on ${g.getDate()} ${MONTHS[g.getMonth()]}`;
+  return `${day} at ${fmt(g.getHours() * 60 + g.getMinutes())}`;
+}
+
+function checkedText(state) {
+  if (state === "confirmed") return `Times checked against the pool's site ${liveWhen()}.`;
+  if (state === "changed") return `Times taken from the pool's site ${liveWhen()}.`;
+  return "Times as checked by hand on 8 October 2026. This pool can't be checked automatically right now.";
+}
+
 function renderFoot() {
   const el = document.getElementById("foot");
   const hiddenPools = POOLS.filter(p => hidden.has(p.id));
   const ageDays = Math.floor((Date.now() - new Date(CHECKED + "T12:00:00")) / 864e5);
+  const states = POOLS.map(p => ({ p, s: liveFor(p).state }));
+  const auto = states.filter(x => x.s === "confirmed" || x.s === "changed");
+  const manual = states.filter(x => !auto.includes(x));
+  const stale = states.some(x => x.s === "stale");
   el.innerHTML = `
-    ${ageDays > 90 ? `<p class="flag">These times were checked ${ageDays} days ago. Pools change their timetables a few times a year, so check before you go.</p>` : ""}
-    <p>Lap swimming only. Times were checked on 8 October 2026 on each pool's own website. Tap a pool for notes, prices and its timetable.</p>
+    ${ageDays > 90 && manual.length ? `<p class="flag">Times for ${manual.map(x => esc(x.p.name)).join(", ")} were checked by hand ${ageDays} days ago. Check the pool's site before you go.</p>` : ""}
+    ${stale ? `<p class="flag">The daily automatic check last ran ${liveWhen()}, so the built-in times are shown.</p>` : ""}
+    <p>Lap swimming only. ${auto.length ? `Checked automatically ${liveWhen()} for ${auto.length} of ${POOLS.length} pools.` : "Times were checked by hand on 8 October 2026."} Tap a pool for notes, prices and its timetable.</p>
     <p>Closed for now: De Does in Leiderdorp (renovation until about February 2027) and the outdoor 50 m pool at De Vliet (reopens in May).</p>
     ${hiddenPools.length ? `<div class="hidden-pools"><span>Hidden:</span>${hiddenPools.map(p => `<button data-show="${p.id}">Show ${esc(p.name)}</button>`).join("")}</div>` : ""}`;
 }
@@ -586,8 +659,22 @@ document.addEventListener("click", e => {
   else if (t.dataset.show) { hidden.delete(t.dataset.show); store.set("banen.hidden", [...hidden]); }
   render();
 });
-document.addEventListener("visibilitychange", () => { if (!document.hidden) render(); });
+async function loadLive() {
+  try {
+    const res = await fetch("times.json", { cache: "no-cache" });
+    if (!res.ok) return;
+    const data = await res.json();
+    if (data?.generated && data.pools) { LIVE = data; render(); }
+  } catch {}
+}
+let lastLoad = Date.now();
+document.addEventListener("visibilitychange", () => {
+  if (document.hidden) return;
+  render();
+  if (Date.now() - lastLoad > 3600e3) { lastLoad = Date.now(); loadLive(); }
+});
 render();
+loadLive();
 setInterval(render, 30000);
 </script>
 </body>
