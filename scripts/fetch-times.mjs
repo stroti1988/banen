@@ -116,11 +116,25 @@ const SOURCES = {
   sterrenbad: () => sportfondsen("sterrenbad.sportfondsen.nl"),
 };
 
+// Same weekly fingerprint the app compares with BASELINE in index.html.
+function weeklyKey(days) {
+  const min = t => { const [h, m] = t.split(":"); return h * 60 + Number(m); };
+  const hm = m => `${pad(Math.floor(m / 60))}${pad(m % 60)}`;
+  return [1, 2, 3, 4, 5, 6, 7].map(d => {
+    const merged = [];
+    for (const [s, e] of (days[d] || []).map(([s, e]) => [min(s), min(e)]).sort((a, b) => a[0] - b[0])) {
+      const last = merged[merged.length - 1];
+      if (last && s <= last[1]) last[1] = Math.max(last[1], e); else merged.push([s, e]);
+    }
+    return `${d}:${merged.map(([s, e]) => `${hm(s)}-${hm(e)}`).join(",")}`;
+  }).join("|");
+}
+
 const out = { generated: new Date().toISOString(), pools: {} };
 await Promise.all(Object.entries(SOURCES).map(async ([id, fn]) => {
   try {
     out.pools[id] = { ok: true, ...(await fn()) };
-    console.log(`ok    ${id}`);
+    console.log(`ok    ${id}${out.pools[id].kind === "weekly" ? `  ${weeklyKey(out.pools[id].days)}` : ""}`);
   } catch (err) {
     out.pools[id] = { ok: false, error: String(err.message ?? err) };
     console.log(`fail  ${id}: ${err.message ?? err}`);
