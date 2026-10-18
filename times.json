@@ -1,9 +1,78 @@
 {
- "generated": "2026-10-17T08:31:06.739Z",
+ "generated": "2026-10-18T08:49:13.157Z",
  "pools": {
   "poelmeer": {
    "ok": false,
    "error": "HTTP 403 for https://www.optisport.nl/api/optisport/v1/upcomingeventsschedule"
+  },
+  "binnenzee": {
+   "ok": true,
+   "kind": "weekly",
+   "days": {
+    "1": [
+     [
+      "09:00",
+      "12:00",
+      "Banenzwemmen",
+      [
+       "09:00",
+       "10:00"
+      ]
+     ],
+     [
+      "19:00",
+      "21:00",
+      "Banenzwemmen",
+      null
+     ]
+    ],
+    "2": [
+     [
+      "07:00",
+      "11:00",
+      "Banenzwemmen",
+      null
+     ]
+    ],
+    "3": [
+     [
+      "10:00",
+      "12:00",
+      "Banenzwemmen",
+      null
+     ]
+    ],
+    "4": [
+     [
+      "07:00",
+      "12:00",
+      "Banenzwemmen",
+      null
+     ]
+    ],
+    "5": [
+     [
+      "09:00",
+      "12:00",
+      "Banenzwemmen",
+      null
+     ],
+     [
+      "19:00",
+      "20:00",
+      "Banenzwemmen",
+      null
+     ]
+    ],
+    "7": [
+     [
+      "09:00",
+      "11:00",
+      "Banenzwemmen",
+      null
+     ]
+    ]
+   }
   },
   "vliet": {
    "ok": true,
@@ -181,75 +250,6 @@
     ]
    }
   },
-  "binnenzee": {
-   "ok": true,
-   "kind": "weekly",
-   "days": {
-    "1": [
-     [
-      "09:00",
-      "12:00",
-      "Banenzwemmen",
-      [
-       "09:00",
-       "10:00"
-      ]
-     ],
-     [
-      "19:00",
-      "21:00",
-      "Banenzwemmen",
-      null
-     ]
-    ],
-    "2": [
-     [
-      "07:00",
-      "11:00",
-      "Banenzwemmen",
-      null
-     ]
-    ],
-    "3": [
-     [
-      "10:00",
-      "12:00",
-      "Banenzwemmen",
-      null
-     ]
-    ],
-    "4": [
-     [
-      "07:00",
-      "12:00",
-      "Banenzwemmen",
-      null
-     ]
-    ],
-    "5": [
-     [
-      "09:00",
-      "12:00",
-      "Banenzwemmen",
-      null
-     ],
-     [
-      "19:00",
-      "20:00",
-      "Banenzwemmen",
-      null
-     ]
-    ],
-    "7": [
-     [
-      "09:00",
-      "11:00",
-      "Banenzwemmen",
-      null
-     ]
-    ]
-   }
-  },
   "sterrenbad": {
    "ok": true,
    "kind": "weekly",
@@ -405,18 +405,18 @@
     "2": [
      [
       "07:00",
-      "08:00",
-      "Banenzwemmen - Sportief",
-      null
-     ],
-     [
-      "07:00",
       "13:00",
       "Banenzwemmen",
       [
        "07:00",
        "12:00"
       ]
+     ],
+     [
+      "07:00",
+      "08:00",
+      "Banenzwemmen - Sportief",
+      null
      ],
      [
       "20:00",
@@ -434,14 +434,14 @@
     "3": [
      [
       "07:00",
-      "08:00",
-      "Banenzwemmen - Sportief",
+      "09:30",
+      "Banenzwemmen",
       null
      ],
      [
       "07:00",
-      "09:30",
-      "Banenzwemmen",
+      "08:00",
+      "Banenzwemmen - Sportief",
       null
      ],
      [
@@ -567,13 +567,13 @@
      [
       "09:30",
       "11:00",
-      "Banenzwemmen - Sportief",
+      "Banenzwemmen",
       null
      ],
      [
       "09:30",
       "11:00",
-      "Banenzwemmen",
+      "Banenzwemmen - Sportief",
       null
      ]
     ]
@@ -582,23 +582,9 @@
   "aquamar": {
    "ok": true,
    "kind": "dated",
-   "from": "2026-10-17",
-   "to": "2026-11-13",
+   "from": "2026-10-18",
+   "to": "2026-11-14",
    "dates": {
-    "2026-10-17": [
-     [
-      "10:00",
-      "12:00",
-      "Banen zwemmen",
-      "Wedstrijdbad"
-     ],
-     [
-      "13:00",
-      "16:00",
-      "Banen zwemmen",
-      "Multifunctionele bad"
-     ]
-    ],
     "2026-10-18": [
      [
       "10:00",
@@ -971,6 +957,20 @@
       "16:00",
       "Banen zwemmen",
       "Multifunctionele bad"
+     ]
+    ],
+    "2026-11-15": [
+     [
+      "10:00",
+      "12:00",
+      "Banen zwemmen",
+      "Wedstrijdbad"
+     ],
+     [
+      "12:00",
+      "16:00",
+      "Banen zwemmen (minimaal 1 baan beschikbaar)",
+      "Wedstrijdbad"
      ]
     ]
    }
