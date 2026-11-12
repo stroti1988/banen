@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-11T11:49:35.530Z",
+ "generated": "2026-11-12T12:36:19.883Z",
  "pools": {
   "poelmeer": {
    "ok": false,
@@ -67,225 +67,6 @@
     "7": [
      [
       "09:00",
-      "11:00",
-      "Banenzwemmen",
-      null
-     ]
-    ]
-   }
-  },
-  "wedde": {
-   "ok": true,
-   "kind": "weekly",
-   "days": {
-    "1": [
-     [
-      "07:00",
-      "09:30",
-      "Banenzwemmen",
-      null
-     ],
-     [
-      "07:00",
-      "08:00",
-      "Banenzwemmen - Sportief",
-      null
-     ],
-     [
-      "10:30",
-      "13:00",
-      "Banenzwemmen",
-      [
-       "10:30",
-       "12:00"
-      ]
-     ],
-     [
-      "11:00",
-      "13:00",
-      "Banenzwemmen - Sportief",
-      [
-       "11:00",
-       "12:00"
-      ]
-     ],
-     [
-      "21:00",
-      "22:00",
-      "Banenzwemmen - Sportief",
-      null
-     ]
-    ],
-    "2": [
-     [
-      "07:00",
-      "13:00",
-      "Banenzwemmen",
-      [
-       "07:00",
-       "12:00"
-      ]
-     ],
-     [
-      "07:00",
-      "08:00",
-      "Banenzwemmen - Sportief",
-      null
-     ],
-     [
-      "20:00",
-      "21:00",
-      "Banenzwemmen - Sportief",
-      null
-     ],
-     [
-      "21:00",
-      "22:00",
-      "Banenzwemmen - Sportief",
-      null
-     ]
-    ],
-    "3": [
-     [
-      "07:00",
-      "09:30",
-      "Banenzwemmen",
-      null
-     ],
-     [
-      "07:00",
-      "08:00",
-      "Banenzwemmen - Sportief",
-      null
-     ],
-     [
-      "09:30",
-      "10:15",
-      "Banenzwemmen",
-      null
-     ],
-     [
-      "10:15",
-      "13:00",
-      "Banenzwemmen",
-      [
-       "10:15",
-       "12:00"
-      ]
-     ],
-     [
-      "11:00",
-      "13:00",
-      "Banenzwemmen - Sportief",
-      [
-       "11:00",
-       "12:00"
-      ]
-     ],
-     [
-      "21:00",
-      "22:00",
-      "Banenzwemmen - Sportief",
-      null
-     ]
-    ],
-    "4": [
-     [
-      "07:00",
-      "08:00",
-      "Banenzwemmen - Sportief",
-      null
-     ],
-     [
-      "07:00",
-      "09:30",
-      "Banenzwemmen",
-      null
-     ],
-     [
-      "09:15",
-      "10:45",
-      "Banenzwemmen",
-      null
-     ],
-     [
-      "10:45",
-      "13:00",
-      "Banenzwemmen",
-      [
-       "10:45",
-       "12:00"
-      ]
-     ],
-     [
-      "11:00",
-      "13:00",
-      "Banenzwemmen - Sportief",
-      [
-       "11:00",
-       "12:00"
-      ]
-     ],
-     [
-      "20:00",
-      "21:00",
-      "Banenzwemmen - Sportief",
-      null
-     ],
-     [
-      "21:00",
-      "22:00",
-      "Banenzwemmen - Sportief",
-      null
-     ]
-    ],
-    "5": [
-     [
-      "07:00",
-      "08:00",
-      "Banenzwemmen - Sportief",
-      null
-     ],
-     [
-      "07:00",
-      "09:15",
-      "Banenzwemmen",
-      null
-     ],
-     [
-      "09:15",
-      "10:45",
-      "Banenzwemmen",
-      null
-     ],
-     [
-      "10:45",
-      "13:00",
-      "Banenzwemmen",
-      [
-       "10:45",
-       "12:00"
-      ]
-     ],
-     [
-      "11:00",
-      "13:00",
-      "Banenzwemmen - Sportief",
-      [
-       "11:00",
-       "12:00"
-      ]
-     ]
-    ],
-    "7": [
-     [
-      "09:30",
-      "11:00",
-      "Banenzwemmen - Sportief",
-      null
-     ],
-     [
-      "09:30",
       "11:00",
       "Banenzwemmen",
       null
@@ -406,23 +187,9 @@
   "aquamar": {
    "ok": true,
    "kind": "dated",
-   "from": "2026-11-11",
-   "to": "2026-12-08",
+   "from": "2026-11-12",
+   "to": "2026-12-09",
    "dates": {
-    "2026-11-11": [
-     [
-      "13:30",
-      "16:00",
-      "Banenzwemmen (2/3 bad beschikbaar)",
-      "Wedstrijdbad"
-     ],
-     [
-      "07:30",
-      "13:30",
-      "Banen zwemmen",
-      "Wedstrijdbad"
-     ]
-    ],
     "2026-11-12": [
      [
       "07:30",
@@ -790,6 +557,14 @@
       "Banen zwemmen",
       "Wedstrijdbad"
      ]
+    ],
+    "2026-12-10": [
+     [
+      "07:30",
+      "18:00",
+      "Banen zwemmen",
+      "Wedstrijdbad"
+     ]
     ]
    }
   },
@@ -965,6 +740,225 @@
       "10:15",
       "12:00",
       "Banenzwemmen"
+     ]
+    ]
+   }
+  },
+  "wedde": {
+   "ok": true,
+   "kind": "weekly",
+   "days": {
+    "1": [
+     [
+      "07:00",
+      "09:30",
+      "Banenzwemmen",
+      null
+     ],
+     [
+      "07:00",
+      "08:00",
+      "Banenzwemmen - Sportief",
+      null
+     ],
+     [
+      "10:30",
+      "13:00",
+      "Banenzwemmen",
+      [
+       "10:30",
+       "12:00"
+      ]
+     ],
+     [
+      "11:00",
+      "13:00",
+      "Banenzwemmen - Sportief",
+      [
+       "11:00",
+       "12:00"
+      ]
+     ],
+     [
+      "21:00",
+      "22:00",
+      "Banenzwemmen - Sportief",
+      null
+     ]
+    ],
+    "2": [
+     [
+      "07:00",
+      "13:00",
+      "Banenzwemmen",
+      [
+       "07:00",
+       "12:00"
+      ]
+     ],
+     [
+      "07:00",
+      "08:00",
+      "Banenzwemmen - Sportief",
+      null
+     ],
+     [
+      "20:00",
+      "21:00",
+      "Banenzwemmen - Sportief",
+      null
+     ],
+     [
+      "21:00",
+      "22:00",
+      "Banenzwemmen - Sportief",
+      null
+     ]
+    ],
+    "3": [
+     [
+      "07:00",
+      "09:30",
+      "Banenzwemmen",
+      null
+     ],
+     [
+      "07:00",
+      "08:00",
+      "Banenzwemmen - Sportief",
+      null
+     ],
+     [
+      "09:30",
+      "10:15",
+      "Banenzwemmen",
+      null
+     ],
+     [
+      "10:15",
+      "13:00",
+      "Banenzwemmen",
+      [
+       "10:15",
+       "12:00"
+      ]
+     ],
+     [
+      "11:00",
+      "13:00",
+      "Banenzwemmen - Sportief",
+      [
+       "11:00",
+       "12:00"
+      ]
+     ],
+     [
+      "21:00",
+      "22:00",
+      "Banenzwemmen - Sportief",
+      null
+     ]
+    ],
+    "4": [
+     [
+      "07:00",
+      "08:00",
+      "Banenzwemmen - Sportief",
+      null
+     ],
+     [
+      "07:00",
+      "09:30",
+      "Banenzwemmen",
+      null
+     ],
+     [
+      "09:15",
+      "10:45",
+      "Banenzwemmen",
+      null
+     ],
+     [
+      "10:45",
+      "13:00",
+      "Banenzwemmen",
+      [
+       "10:45",
+       "12:00"
+      ]
+     ],
+     [
+      "11:00",
+      "13:00",
+      "Banenzwemmen - Sportief",
+      [
+       "11:00",
+       "12:00"
+      ]
+     ],
+     [
+      "20:00",
+      "21:00",
+      "Banenzwemmen - Sportief",
+      null
+     ],
+     [
+      "21:00",
+      "22:00",
+      "Banenzwemmen - Sportief",
+      null
+     ]
+    ],
+    "5": [
+     [
+      "07:00",
+      "08:00",
+      "Banenzwemmen - Sportief",
+      null
+     ],
+     [
+      "07:00",
+      "09:15",
+      "Banenzwemmen",
+      null
+     ],
+     [
+      "09:15",
+      "10:45",
+      "Banenzwemmen",
+      null
+     ],
+     [
+      "10:45",
+      "13:00",
+      "Banenzwemmen",
+      [
+       "10:45",
+       "12:00"
+      ]
+     ],
+     [
+      "11:00",
+      "13:00",
+      "Banenzwemmen - Sportief",
+      [
+       "11:00",
+       "12:00"
+      ]
+     ]
+    ],
+    "7": [
+     [
+      "09:30",
+      "11:00",
+      "Banenzwemmen - Sportief",
+      null
+     ],
+     [
+      "09:30",
+      "11:00",
+      "Banenzwemmen",
+      null
      ]
     ]
    }
