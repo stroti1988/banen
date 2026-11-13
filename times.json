@@ -1,9 +1,97 @@
 {
- "generated": "2026-11-12T12:36:19.883Z",
+ "generated": "2026-11-13T12:07:30.954Z",
  "pools": {
   "poelmeer": {
    "ok": false,
    "error": "HTTP 403 for https://www.optisport.nl/api/optisport/v1/upcomingeventsschedule"
+  },
+  "vliet": {
+   "ok": true,
+   "kind": "weekly",
+   "days": {
+    "1": [
+     [
+      "07:00",
+      "11:00",
+      "Banenzwemmen"
+     ],
+     [
+      "12:30",
+      "15:30",
+      "Banenzwemmen"
+     ],
+     [
+      "19:00",
+      "20:30",
+      "Banenzwemmen"
+     ]
+    ],
+    "2": [
+     [
+      "07:00",
+      "12:00",
+      "Banenzwemmen"
+     ],
+     [
+      "12:30",
+      "16:00",
+      "Banenzwemmen"
+     ],
+     [
+      "19:00",
+      "20:30",
+      "Banenzwemmen"
+     ]
+    ],
+    "3": [
+     [
+      "07:00",
+      "12:00",
+      "Banenzwemmen"
+     ]
+    ],
+    "4": [
+     [
+      "07:00",
+      "12:00",
+      "Banenzwemmen"
+     ],
+     [
+      "12:30",
+      "15:30",
+      "Banenzwemmen"
+     ],
+     [
+      "19:15",
+      "20:45",
+      "Banenzwemmen"
+     ]
+    ],
+    "5": [
+     [
+      "07:00",
+      "11:00",
+      "Banenzwemmen"
+     ],
+     [
+      "12:30",
+      "16:00",
+      "Banenzwemmen"
+     ],
+     [
+      "19:15",
+      "20:30",
+      "Banenzwemmen"
+     ]
+    ],
+    "7": [
+     [
+      "10:30",
+      "13:30",
+      "Banenzwemmen"
+     ]
+    ]
+   }
   },
   "binnenzee": {
    "ok": true,
@@ -70,6 +158,94 @@
       "11:00",
       "Banenzwemmen",
       null
+     ]
+    ]
+   }
+  },
+  "zijl": {
+   "ok": true,
+   "kind": "weekly",
+   "days": {
+    "1": [
+     [
+      "07:00",
+      "08:30",
+      "Banenzwemmen"
+     ],
+     [
+      "09:00",
+      "13:30",
+      "Banenzwemmen"
+     ]
+    ],
+    "2": [
+     [
+      "07:00",
+      "08:30",
+      "Banenzwemmen"
+     ],
+     [
+      "09:00",
+      "13:30",
+      "Banenzwemmen"
+     ],
+     [
+      "14:00",
+      "15:30",
+      "Banenzwemmen"
+     ]
+    ],
+    "3": [
+     [
+      "07:00",
+      "08:30",
+      "Banenzwemmen"
+     ],
+     [
+      "09:00",
+      "13:30",
+      "Banenzwemmen"
+     ],
+     [
+      "19:15",
+      "20:30",
+      "Banenzwemmen"
+     ]
+    ],
+    "4": [
+     [
+      "07:00",
+      "08:30",
+      "Banenzwemmen"
+     ],
+     [
+      "09:00",
+      "13:30",
+      "Banenzwemmen"
+     ]
+    ],
+    "5": [
+     [
+      "07:00",
+      "08:30",
+      "Banenzwemmen"
+     ],
+     [
+      "09:00",
+      "13:30",
+      "Banenzwemmen"
+     ],
+     [
+      "14:00",
+      "15:30",
+      "Banenzwemmen"
+     ]
+    ],
+    "7": [
+     [
+      "10:15",
+      "12:00",
+      "Banenzwemmen"
      ]
     ]
    }
@@ -187,17 +363,9 @@
   "aquamar": {
    "ok": true,
    "kind": "dated",
-   "from": "2026-11-12",
-   "to": "2026-12-09",
+   "from": "2026-11-13",
+   "to": "2026-12-10",
    "dates": {
-    "2026-11-12": [
-     [
-      "07:30",
-      "18:00",
-      "Banen zwemmen",
-      "Wedstrijdbad"
-     ]
-    ],
     "2026-11-13": [
      [
       "07:30",
@@ -565,181 +733,19 @@
       "Banen zwemmen",
       "Wedstrijdbad"
      ]
-    ]
-   }
-  },
-  "vliet": {
-   "ok": true,
-   "kind": "weekly",
-   "days": {
-    "1": [
-     [
-      "07:00",
-      "11:00",
-      "Banenzwemmen"
-     ],
-     [
-      "12:30",
-      "15:30",
-      "Banenzwemmen"
-     ],
-     [
-      "19:00",
-      "20:30",
-      "Banenzwemmen"
-     ]
     ],
-    "2": [
+    "2026-12-11": [
      [
-      "07:00",
-      "12:00",
-      "Banenzwemmen"
+      "07:30",
+      "18:00",
+      "Banen zwemmen",
+      "Wedstrijdbad"
      ],
      [
-      "12:30",
-      "16:00",
-      "Banenzwemmen"
-     ],
-     [
-      "19:00",
-      "20:30",
-      "Banenzwemmen"
-     ]
-    ],
-    "3": [
-     [
-      "07:00",
-      "12:00",
-      "Banenzwemmen"
-     ]
-    ],
-    "4": [
-     [
-      "07:00",
-      "12:00",
-      "Banenzwemmen"
-     ],
-     [
-      "12:30",
-      "15:30",
-      "Banenzwemmen"
-     ],
-     [
-      "19:15",
-      "20:45",
-      "Banenzwemmen"
-     ]
-    ],
-    "5": [
-     [
-      "07:00",
-      "11:00",
-      "Banenzwemmen"
-     ],
-     [
-      "12:30",
-      "16:00",
-      "Banenzwemmen"
-     ],
-     [
-      "19:15",
-      "20:30",
-      "Banenzwemmen"
-     ]
-    ],
-    "7": [
-     [
-      "10:30",
-      "13:30",
-      "Banenzwemmen"
-     ]
-    ]
-   }
-  },
-  "zijl": {
-   "ok": true,
-   "kind": "weekly",
-   "days": {
-    "1": [
-     [
-      "07:00",
-      "08:30",
-      "Banenzwemmen"
-     ],
-     [
-      "09:00",
-      "13:30",
-      "Banenzwemmen"
-     ]
-    ],
-    "2": [
-     [
-      "07:00",
-      "08:30",
-      "Banenzwemmen"
-     ],
-     [
-      "09:00",
-      "13:30",
-      "Banenzwemmen"
-     ],
-     [
-      "14:00",
-      "15:30",
-      "Banenzwemmen"
-     ]
-    ],
-    "3": [
-     [
-      "07:00",
-      "08:30",
-      "Banenzwemmen"
-     ],
-     [
-      "09:00",
-      "13:30",
-      "Banenzwemmen"
-     ],
-     [
-      "19:15",
-      "20:30",
-      "Banenzwemmen"
-     ]
-    ],
-    "4": [
-     [
-      "07:00",
-      "08:30",
-      "Banenzwemmen"
-     ],
-     [
-      "09:00",
-      "13:30",
-      "Banenzwemmen"
-     ]
-    ],
-    "5": [
-     [
-      "07:00",
-      "08:30",
-      "Banenzwemmen"
-     ],
-     [
-      "09:00",
-      "13:30",
-      "Banenzwemmen"
-     ],
-     [
-      "14:00",
-      "15:30",
-      "Banenzwemmen"
-     ]
-    ],
-    "7": [
-     [
-      "10:15",
-      "12:00",
-      "Banenzwemmen"
+      "20:00",
+      "22:00",
+      "Banen zwemmen",
+      "Multifunctionele bad"
      ]
     ]
    }
