@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-18T12:58:24.334Z",
+ "generated": "2026-11-19T12:56:42.287Z",
  "pools": {
   "poelmeer": {
    "ok": false,
@@ -253,23 +253,9 @@
   "aquamar": {
    "ok": true,
    "kind": "dated",
-   "from": "2026-11-18",
-   "to": "2026-12-15",
+   "from": "2026-11-19",
+   "to": "2026-12-16",
    "dates": {
-    "2026-11-18": [
-     [
-      "13:30",
-      "16:00",
-      "Banenzwemmen (2/3 bad beschikbaar)",
-      "Wedstrijdbad"
-     ],
-     [
-      "07:30",
-      "13:30",
-      "Banen zwemmen",
-      "Wedstrijdbad"
-     ]
-    ],
     "2026-11-19": [
      [
       "07:30",
@@ -586,6 +572,14 @@
      [
       "07:30",
       "13:30",
+      "Banen zwemmen",
+      "Wedstrijdbad"
+     ]
+    ],
+    "2026-12-17": [
+     [
+      "07:30",
+      "18:00",
       "Banen zwemmen",
       "Wedstrijdbad"
      ]
