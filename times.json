@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-24T14:47:26.859Z",
+ "generated": "2026-11-25T14:13:59.150Z",
  "pools": {
   "poelmeer": {
    "ok": false,
@@ -250,6 +250,506 @@
     ]
    }
   },
+  "aquamar": {
+   "ok": true,
+   "kind": "dated",
+   "from": "2026-11-25",
+   "to": "2026-12-22",
+   "dates": {
+    "2026-11-25": [
+     [
+      "13:30",
+      "16:00",
+      "Banenzwemmen (2/3 bad beschikbaar)",
+      "Wedstrijdbad"
+     ],
+     [
+      "07:30",
+      "13:30",
+      "Banen zwemmen",
+      "Wedstrijdbad"
+     ]
+    ],
+    "2026-11-26": [
+     [
+      "07:30",
+      "18:00",
+      "Banen zwemmen",
+      "Wedstrijdbad"
+     ]
+    ],
+    "2026-11-27": [
+     [
+      "07:30",
+      "18:00",
+      "Banen zwemmen",
+      "Wedstrijdbad"
+     ],
+     [
+      "20:00",
+      "22:00",
+      "Banen zwemmen",
+      "Multifunctionele bad"
+     ]
+    ],
+    "2026-11-28": [
+     [
+      "10:00",
+      "12:00",
+      "Banen zwemmen",
+      "Wedstrijdbad"
+     ],
+     [
+      "13:00",
+      "16:00",
+      "Banen zwemmen",
+      "Multifunctionele bad"
+     ]
+    ],
+    "2026-11-29": [
+     [
+      "10:00",
+      "12:00",
+      "Banen zwemmen",
+      "Wedstrijdbad"
+     ],
+     [
+      "12:00",
+      "16:00",
+      "Banen zwemmen (minimaal 1 baan beschikbaar)",
+      "Wedstrijdbad"
+     ]
+    ],
+    "2026-11-30": [
+     [
+      "07:30",
+      "18:00",
+      "Banen zwemmen",
+      "Wedstrijdbad"
+     ]
+    ],
+    "2026-12-01": [
+     [
+      "14:00",
+      "20:30",
+      "Banen zwemmen",
+      "Wedstrijdbad"
+     ],
+     [
+      "12:30",
+      "14:00",
+      "Banen zwemmen",
+      "Multifunctionele bad"
+     ],
+     [
+      "07:30",
+      "12:30",
+      "Banen zwemmen",
+      "Wedstrijdbad"
+     ]
+    ],
+    "2026-12-02": [
+     [
+      "13:30",
+      "16:00",
+      "Banenzwemmen (2/3 bad beschikbaar)",
+      "Wedstrijdbad"
+     ],
+     [
+      "07:30",
+      "13:30",
+      "Banen zwemmen",
+      "Wedstrijdbad"
+     ]
+    ],
+    "2026-12-03": [
+     [
+      "07:30",
+      "18:00",
+      "Banen zwemmen",
+      "Wedstrijdbad"
+     ]
+    ],
+    "2026-12-04": [
+     [
+      "07:30",
+      "18:00",
+      "Banen zwemmen",
+      "Wedstrijdbad"
+     ],
+     [
+      "20:00",
+      "22:00",
+      "Banen zwemmen",
+      "Multifunctionele bad"
+     ]
+    ],
+    "2026-12-05": [
+     [
+      "10:00",
+      "12:00",
+      "Banen zwemmen",
+      "Wedstrijdbad"
+     ],
+     [
+      "13:00",
+      "16:00",
+      "Banen zwemmen",
+      "Multifunctionele bad"
+     ]
+    ],
+    "2026-12-06": [
+     [
+      "10:00",
+      "12:00",
+      "Banen zwemmen",
+      "Wedstrijdbad"
+     ],
+     [
+      "12:00",
+      "16:00",
+      "Banen zwemmen (minimaal 1 baan beschikbaar)",
+      "Wedstrijdbad"
+     ]
+    ],
+    "2026-12-07": [
+     [
+      "07:30",
+      "18:00",
+      "Banen zwemmen",
+      "Wedstrijdbad"
+     ]
+    ],
+    "2026-12-08": [
+     [
+      "14:00",
+      "20:30",
+      "Banen zwemmen",
+      "Wedstrijdbad"
+     ],
+     [
+      "12:30",
+      "14:00",
+      "Banen zwemmen",
+      "Multifunctionele bad"
+     ],
+     [
+      "07:30",
+      "12:30",
+      "Banen zwemmen",
+      "Wedstrijdbad"
+     ]
+    ],
+    "2026-12-09": [
+     [
+      "13:30",
+      "16:00",
+      "Banenzwemmen (2/3 bad beschikbaar)",
+      "Wedstrijdbad"
+     ],
+     [
+      "07:30",
+      "13:30",
+      "Banen zwemmen",
+      "Wedstrijdbad"
+     ]
+    ],
+    "2026-12-10": [
+     [
+      "07:30",
+      "18:00",
+      "Banen zwemmen",
+      "Wedstrijdbad"
+     ]
+    ],
+    "2026-12-11": [
+     [
+      "07:30",
+      "18:00",
+      "Banen zwemmen",
+      "Wedstrijdbad"
+     ],
+     [
+      "20:00",
+      "22:00",
+      "Banen zwemmen",
+      "Multifunctionele bad"
+     ]
+    ],
+    "2026-12-12": [
+     [
+      "10:00",
+      "12:00",
+      "Banen zwemmen",
+      "Wedstrijdbad"
+     ],
+     [
+      "13:00",
+      "16:00",
+      "Banen zwemmen",
+      "Multifunctionele bad"
+     ]
+    ],
+    "2026-12-13": [
+     [
+      "10:00",
+      "12:00",
+      "Banen zwemmen",
+      "Wedstrijdbad"
+     ],
+     [
+      "12:00",
+      "16:00",
+      "Banen zwemmen (minimaal 1 baan beschikbaar)",
+      "Wedstrijdbad"
+     ]
+    ],
+    "2026-12-14": [
+     [
+      "07:30",
+      "18:00",
+      "Banen zwemmen",
+      "Wedstrijdbad"
+     ]
+    ],
+    "2026-12-15": [
+     [
+      "14:00",
+      "20:30",
+      "Banen zwemmen",
+      "Wedstrijdbad"
+     ],
+     [
+      "12:30",
+      "14:00",
+      "Banen zwemmen",
+      "Multifunctionele bad"
+     ],
+     [
+      "07:30",
+      "12:30",
+      "Banen zwemmen",
+      "Wedstrijdbad"
+     ]
+    ],
+    "2026-12-16": [
+     [
+      "13:30",
+      "16:00",
+      "Banenzwemmen (2/3 bad beschikbaar)",
+      "Wedstrijdbad"
+     ],
+     [
+      "07:30",
+      "13:30",
+      "Banen zwemmen",
+      "Wedstrijdbad"
+     ]
+    ],
+    "2026-12-17": [
+     [
+      "07:30",
+      "18:00",
+      "Banen zwemmen",
+      "Wedstrijdbad"
+     ]
+    ],
+    "2026-12-18": [
+     [
+      "07:30",
+      "18:00",
+      "Banen zwemmen",
+      "Wedstrijdbad"
+     ],
+     [
+      "20:00",
+      "22:00",
+      "Banen zwemmen",
+      "Multifunctionele bad"
+     ]
+    ],
+    "2026-12-19": [
+     [
+      "10:00",
+      "12:00",
+      "Banen zwemmen",
+      "Wedstrijdbad"
+     ],
+     [
+      "13:00",
+      "16:00",
+      "Banen zwemmen",
+      "Multifunctionele bad"
+     ]
+    ],
+    "2026-12-20": [
+     [
+      "10:00",
+      "12:00",
+      "Banen zwemmen",
+      "Wedstrijdbad"
+     ],
+     [
+      "12:00",
+      "16:00",
+      "Banen zwemmen (minimaal 1 baan beschikbaar)",
+      "Wedstrijdbad"
+     ]
+    ],
+    "2026-12-21": [
+     [
+      "07:30",
+      "18:00",
+      "Banen zwemmen",
+      "Wedstrijdbad"
+     ]
+    ],
+    "2026-12-22": [
+     [
+      "14:00",
+      "20:30",
+      "Banen zwemmen",
+      "Wedstrijdbad"
+     ],
+     [
+      "12:30",
+      "14:00",
+      "Banen zwemmen",
+      "Multifunctionele bad"
+     ],
+     [
+      "07:30",
+      "12:30",
+      "Banen zwemmen",
+      "Wedstrijdbad"
+     ]
+    ],
+    "2026-12-23": [
+     [
+      "13:30",
+      "16:00",
+      "Banenzwemmen (2/3 bad beschikbaar)",
+      "Wedstrijdbad"
+     ],
+     [
+      "07:30",
+      "13:30",
+      "Banen zwemmen",
+      "Wedstrijdbad"
+     ]
+    ]
+   }
+  },
+  "sterrenbad": {
+   "ok": true,
+   "kind": "weekly",
+   "days": {
+    "1": [
+     [
+      "07:30",
+      "08:45",
+      "Banenzwemmen",
+      null
+     ],
+     [
+      "12:35",
+      "13:15",
+      "Banenzwemmen",
+      null
+     ],
+     [
+      "19:30",
+      "20:15",
+      "Banenzwemmen",
+      null
+     ]
+    ],
+    "2": [
+     [
+      "07:30",
+      "09:30",
+      "Banenzwemmen",
+      null
+     ],
+     [
+      "12:00",
+      "13:30",
+      "Banenzwemmen",
+      null
+     ],
+     [
+      "20:15",
+      "21:00",
+      "Banenzwemmen",
+      null
+     ]
+    ],
+    "3": [
+     [
+      "07:30",
+      "09:00",
+      "Banenzwemmen",
+      null
+     ],
+     [
+      "12:00",
+      "13:00",
+      "Banenzwemmen",
+      null
+     ],
+     [
+      "19:30",
+      "20:15",
+      "Banenzwemmen",
+      null
+     ]
+    ],
+    "4": [
+     [
+      "07:30",
+      "09:30",
+      "Banenzwemmen",
+      null
+     ],
+     [
+      "12:00",
+      "13:00",
+      "Banenzwemmen",
+      null
+     ]
+    ],
+    "5": [
+     [
+      "07:30",
+      "09:30",
+      "Banenzwemmen",
+      null
+     ],
+     [
+      "12:00",
+      "13:00",
+      "Banenzwemmen",
+      null
+     ]
+    ],
+    "6": [
+     [
+      "07:30",
+      "08:10",
+      "Banenzwemmen",
+      null
+     ]
+    ],
+    "7": [
+     [
+      "09:00",
+      "10:00",
+      "Banenzwemmen",
+      null
+     ]
+    ]
+   }
+  },
   "wedde": {
    "ok": true,
    "kind": "weekly",
@@ -465,452 +965,6 @@
       "11:00",
       "Banenzwemmen",
       null
-     ]
-    ]
-   }
-  },
-  "sterrenbad": {
-   "ok": true,
-   "kind": "weekly",
-   "days": {
-    "1": [
-     [
-      "07:30",
-      "08:45",
-      "Banenzwemmen",
-      null
-     ],
-     [
-      "12:35",
-      "13:15",
-      "Banenzwemmen",
-      null
-     ],
-     [
-      "19:30",
-      "20:15",
-      "Banenzwemmen",
-      null
-     ]
-    ],
-    "2": [
-     [
-      "07:30",
-      "09:30",
-      "Banenzwemmen",
-      null
-     ],
-     [
-      "12:00",
-      "13:30",
-      "Banenzwemmen",
-      null
-     ],
-     [
-      "20:15",
-      "21:00",
-      "Banenzwemmen",
-      null
-     ]
-    ],
-    "3": [
-     [
-      "07:30",
-      "09:00",
-      "Banenzwemmen",
-      null
-     ],
-     [
-      "12:00",
-      "13:00",
-      "Banenzwemmen",
-      null
-     ],
-     [
-      "19:30",
-      "20:15",
-      "Banenzwemmen",
-      null
-     ]
-    ],
-    "4": [
-     [
-      "07:30",
-      "09:30",
-      "Banenzwemmen",
-      null
-     ],
-     [
-      "12:00",
-      "13:00",
-      "Banenzwemmen",
-      null
-     ]
-    ],
-    "5": [
-     [
-      "07:30",
-      "09:30",
-      "Banenzwemmen",
-      null
-     ],
-     [
-      "12:00",
-      "13:00",
-      "Banenzwemmen",
-      null
-     ]
-    ],
-    "6": [
-     [
-      "07:30",
-      "08:10",
-      "Banenzwemmen",
-      null
-     ]
-    ],
-    "7": [
-     [
-      "09:00",
-      "10:00",
-      "Banenzwemmen",
-      null
-     ]
-    ]
-   }
-  },
-  "aquamar": {
-   "ok": true,
-   "kind": "dated",
-   "from": "2026-11-24",
-   "to": "2026-12-21",
-   "dates": {
-    "2026-11-24": [
-     [
-      "07:30",
-      "20:30",
-      "Banen zwemmen",
-      "Wedstrijdbad"
-     ]
-    ],
-    "2026-11-25": [
-     [
-      "13:30",
-      "16:00",
-      "Banenzwemmen (2/3 bad beschikbaar)",
-      "Wedstrijdbad"
-     ],
-     [
-      "07:30",
-      "13:30",
-      "Banen zwemmen",
-      "Wedstrijdbad"
-     ]
-    ],
-    "2026-11-26": [
-     [
-      "07:30",
-      "18:00",
-      "Banen zwemmen",
-      "Wedstrijdbad"
-     ]
-    ],
-    "2026-11-27": [
-     [
-      "07:30",
-      "18:00",
-      "Banen zwemmen",
-      "Wedstrijdbad"
-     ],
-     [
-      "20:00",
-      "22:00",
-      "Banen zwemmen",
-      "Multifunctionele bad"
-     ]
-    ],
-    "2026-11-28": [
-     [
-      "10:00",
-      "12:00",
-      "Banen zwemmen",
-      "Wedstrijdbad"
-     ],
-     [
-      "13:00",
-      "16:00",
-      "Banen zwemmen",
-      "Multifunctionele bad"
-     ]
-    ],
-    "2026-11-29": [
-     [
-      "10:00",
-      "12:00",
-      "Banen zwemmen",
-      "Wedstrijdbad"
-     ],
-     [
-      "12:00",
-      "16:00",
-      "Banen zwemmen (minimaal 1 baan beschikbaar)",
-      "Wedstrijdbad"
-     ]
-    ],
-    "2026-11-30": [
-     [
-      "07:30",
-      "18:00",
-      "Banen zwemmen",
-      "Wedstrijdbad"
-     ]
-    ],
-    "2026-12-01": [
-     [
-      "07:30",
-      "20:30",
-      "Banen zwemmen",
-      "Wedstrijdbad"
-     ]
-    ],
-    "2026-12-02": [
-     [
-      "13:30",
-      "16:00",
-      "Banenzwemmen (2/3 bad beschikbaar)",
-      "Wedstrijdbad"
-     ],
-     [
-      "07:30",
-      "13:30",
-      "Banen zwemmen",
-      "Wedstrijdbad"
-     ]
-    ],
-    "2026-12-03": [
-     [
-      "07:30",
-      "18:00",
-      "Banen zwemmen",
-      "Wedstrijdbad"
-     ]
-    ],
-    "2026-12-04": [
-     [
-      "07:30",
-      "18:00",
-      "Banen zwemmen",
-      "Wedstrijdbad"
-     ],
-     [
-      "20:00",
-      "22:00",
-      "Banen zwemmen",
-      "Multifunctionele bad"
-     ]
-    ],
-    "2026-12-05": [
-     [
-      "10:00",
-      "12:00",
-      "Banen zwemmen",
-      "Wedstrijdbad"
-     ],
-     [
-      "13:00",
-      "16:00",
-      "Banen zwemmen",
-      "Multifunctionele bad"
-     ]
-    ],
-    "2026-12-06": [
-     [
-      "10:00",
-      "12:00",
-      "Banen zwemmen",
-      "Wedstrijdbad"
-     ],
-     [
-      "12:00",
-      "16:00",
-      "Banen zwemmen (minimaal 1 baan beschikbaar)",
-      "Wedstrijdbad"
-     ]
-    ],
-    "2026-12-07": [
-     [
-      "07:30",
-      "18:00",
-      "Banen zwemmen",
-      "Wedstrijdbad"
-     ]
-    ],
-    "2026-12-08": [
-     [
-      "07:30",
-      "20:30",
-      "Banen zwemmen",
-      "Wedstrijdbad"
-     ]
-    ],
-    "2026-12-09": [
-     [
-      "13:30",
-      "16:00",
-      "Banenzwemmen (2/3 bad beschikbaar)",
-      "Wedstrijdbad"
-     ],
-     [
-      "07:30",
-      "13:30",
-      "Banen zwemmen",
-      "Wedstrijdbad"
-     ]
-    ],
-    "2026-12-10": [
-     [
-      "07:30",
-      "18:00",
-      "Banen zwemmen",
-      "Wedstrijdbad"
-     ]
-    ],
-    "2026-12-11": [
-     [
-      "07:30",
-      "18:00",
-      "Banen zwemmen",
-      "Wedstrijdbad"
-     ],
-     [
-      "20:00",
-      "22:00",
-      "Banen zwemmen",
-      "Multifunctionele bad"
-     ]
-    ],
-    "2026-12-12": [
-     [
-      "10:00",
-      "12:00",
-      "Banen zwemmen",
-      "Wedstrijdbad"
-     ],
-     [
-      "13:00",
-      "16:00",
-      "Banen zwemmen",
-      "Multifunctionele bad"
-     ]
-    ],
-    "2026-12-13": [
-     [
-      "10:00",
-      "12:00",
-      "Banen zwemmen",
-      "Wedstrijdbad"
-     ],
-     [
-      "12:00",
-      "16:00",
-      "Banen zwemmen (minimaal 1 baan beschikbaar)",
-      "Wedstrijdbad"
-     ]
-    ],
-    "2026-12-14": [
-     [
-      "07:30",
-      "18:00",
-      "Banen zwemmen",
-      "Wedstrijdbad"
-     ]
-    ],
-    "2026-12-15": [
-     [
-      "07:30",
-      "20:30",
-      "Banen zwemmen",
-      "Wedstrijdbad"
-     ]
-    ],
-    "2026-12-16": [
-     [
-      "13:30",
-      "16:00",
-      "Banenzwemmen (2/3 bad beschikbaar)",
-      "Wedstrijdbad"
-     ],
-     [
-      "07:30",
-      "13:30",
-      "Banen zwemmen",
-      "Wedstrijdbad"
-     ]
-    ],
-    "2026-12-17": [
-     [
-      "07:30",
-      "18:00",
-      "Banen zwemmen",
-      "Wedstrijdbad"
-     ]
-    ],
-    "2026-12-18": [
-     [
-      "07:30",
-      "18:00",
-      "Banen zwemmen",
-      "Wedstrijdbad"
-     ],
-     [
-      "20:00",
-      "22:00",
-      "Banen zwemmen",
-      "Multifunctionele bad"
-     ]
-    ],
-    "2026-12-19": [
-     [
-      "10:00",
-      "12:00",
-      "Banen zwemmen",
-      "Wedstrijdbad"
-     ],
-     [
-      "13:00",
-      "16:00",
-      "Banen zwemmen",
-      "Multifunctionele bad"
-     ]
-    ],
-    "2026-12-20": [
-     [
-      "10:00",
-      "12:00",
-      "Banen zwemmen",
-      "Wedstrijdbad"
-     ],
-     [
-      "12:00",
-      "16:00",
-      "Banen zwemmen (minimaal 1 baan beschikbaar)",
-      "Wedstrijdbad"
-     ]
-    ],
-    "2026-12-21": [
-     [
-      "07:30",
-      "18:00",
-      "Banen zwemmen",
-      "Wedstrijdbad"
-     ]
-    ],
-    "2026-12-22": [
-     [
-      "07:30",
-      "20:30",
-      "Banen zwemmen",
-      "Wedstrijdbad"
      ]
     ]
    }
